@@ -1,49 +1,290 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/night.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/monokai.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+	<!-- <style>
+		html.dimbg .slide-background {
+			opacity: 1 !important;
+		}
+	</style> -->
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-state="dimbg" data-background="./assets/bg.jpg">
+				<h2>Electron</h2>
+				<section>
+					<p style="font-size: 36px;">Desktop application development using HTML, CSS, JS</p>
+					<img data-src="./assets/electron-logo.jpg" alt="Electron logo">
+				</section>
+			</section>
+			<section>
+				<h2>What is an electron?</h2>
+				<section data-state="dimbg" data-background="./assets/bg.jpg">
+					<ul>
+						<li>open source by GitHub</li>
+						<li>cross platform</li>
+						<li>node.js + chromium + Api</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<h2>More than 700 apps</h2>
+				<section data-state="dimbg" data-background="./assets/bg.jpg">
+					<ul style="font-size: 30px; margin-top: 60px;">
+						<li>Visual Studio Code</li>
+						<li>Slack</li>
+						<li>Skype</li>
+						<li>Discord</li>
+						<li>Streamlabs OBS</li>
+						<li>WordPress Desktop</li>
+						<li>WhatsApp Desktop</li>
+						<li>Atom</li>
+					</ul>
+					<img style="margin: 20px;" data-src="./assets/apps.png" alt="Electron apps">
+				</section>
+			</section>
+			<section>
+				<section data-state="dimbg" data-background="./assets/bg.jpg">
+					<h2>Why desktop?</h2>
+					<section>
+						<ul>
+							<li>Work offline</li>
+							<li>Access to file system</li>
+							<li>Extended capabilities for working with hardware</li>
+							<li>Tray, toolbar, menu</li>
+							<li>Familiar to users</li>
+						</ul>
+					</section>
+				</section>
+			</section>
+			<section data-state="dimbg" data-background="./assets/bg.jpg">
+				<h2>Components</h2>
+				<section>
+					<ul style="list-style: none;">
+						<li style="display: flex;"><img style="border: none;" width="100" src="./assets/api.png"
+								alt="api logo"><span style="padding: 35px 50px;">{ API }</span></li>
+						<li style="display: flex;"><img style="border: none;" width="100" src="./assets/nodejs.png"
+								alt="nodejs logo"><span style="padding: 20px 50px;">Node.js</span>
+						</li>
+						<li style="display: flex;"><img style="border: none;" width="100" src="./assets/Chromium.png"
+								alt="chromium logo"><span style="padding: 35px 50px;">Chromium</span></li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<h2>Work principles</h2>
+				<p>2 types of process</p>
+				<section data-state="dimbg" data-background="./assets/bg.jpg">
+					<table>
+						<tr>
+							<ul style="list-style: none; font-size: smaller; font-weight: lighter;">
+								<li style="color: orangered; font-size: 36px; font-weight: bolder; padding-bottom: 20px;">main
+									process
+								</li>
+								<li>Windows + events (life cycle)</li>
+								<li>Node like (no UI)</li>
+								<li>Interaction with os</li>
+								<li>Creating a renderer process</li>
+							</ul>
+						</tr>
+						<tr>
+							<ul style="list-style: none; font-size: smaller; font-weight: lighter;">
+								<li style="color: orangered; font-size: 36px; font-weight: bolder; padding-bottom: 20px;">renderer
+									process</li>
+								<li>BrowserWindow (UI)</li>
+								<li>Any number of windows</li>
+								<li>Hidden windows</li>
+								<li style="color: transparent;">ololo</li>
+							</ul>
+						</tr>
+					</table>
+				</section>
+				<section data-state="dimbg" data-background="./assets/bg.jpg">
+					<img src="./assets/process-types.png" alt="process types" style="margin-top: 80px;">
+				</section>
+				<section data-state="dimbg" data-background="./assets/bg.jpg">
+					<img src="./assets/flow.png" alt="flow" style="margin-top: 160px;">
+				</section>
+			</section>
+			<section>
+				<h2>Our first APP</h2>
+				<section data-state="dimbg" data-background="./assets/bg.jpg">
+					<ol class="fragment" style="font-size: smaller; font-weight: lighter;">
+						<li>install node + npm</li>
+						<li>npm install -g electron-forge</li>
+						<li>electron-forge init my-new-app</li>
+						<li>cd my-new-app + npm start</li>
+					</ol>
+				</section>
+				<section data-state="dimbg" data-background="./assets/bg.jpg">
+					<img src="./assets/my-new-app.png" alt="my-new-app" style="margin-top: 100px;">
+				</section>
+				<section data-state="dimbg" data-background="./assets/bg.jpg">
+					<p>package.json</p>
+					<pre><code class="hljs" data-trim data-line-numbers="5-11">
+	"name": "my-new-app",
+	"productName": "my-new-app",
+	"version": "1.0.0",
+	"description": "My Electron application description",
+	"main": "src/index.js",
+	"scripts": {
+		"start": "electron-forge start",
+		"package": "electron-forge package",
+		"make": "electron-forge make",
+		"publish": "electron-forge publish",
+		"lint": "eslint src --color"
+	},
+					</code></pre>
+				</section>
+				<section data-state="dimbg" data-background="./assets/bg.jpg">
+					<p>index.js</p>
+					<pre><code class="hljs">
+	import { app, BrowserWindow } from 'electron';
+
+	let mainWindow;
+
+	const createWindow = () => {
+		mainWindow = new BrowserWindow({ 
+			width: 800, 
+			height: 600,
+		});
+		mainWindow.loadURL(`file://${__dirname}/index.html`);
+		mainWindow.webContents.openDevTools();
+		mainWindow.on('closed', () => { mainWindow = null });
+	};
+	app.on('ready', createWindow);
+</code></pre>
+				</section>
+				<section data-state="dimbg" data-background="./assets/bg.jpg">
+					<p style="margin-top: 100px;">index.html</p>
+					<img src="./assets/done-html.png" alt="done-html">
+				</section>
+				<section data-state="dimbg" data-background="./assets/bg.jpg">
+					<p style="margin-top: 100px;">renderer.js</p>
+					<pre><code class="hljs" data-trim data-line-numbers="1,7">
+function celciusToFahrenheit() {
+	let celcius = document.getElementById("celcius").value;
+	let fahrenheit = (celcius * 9) / 5 + 32;
+	document.getElementById("fahrenheit").value = fahrenheit;
+}
+
+function fahrenheitToCelcius() {
+	let fahrenheit = document.getElementById("fahrenheit").value;
+	let celcius = ((fahrenheit - 32) * 5) / 9;
+	document.getElementById("celcius").value = celcius;
+}
+										</code></pre>
+				</section>
+				<section data-state="dimbg" data-background="./assets/bg.jpg">
+					<p style="margin-top: 100px;">result</p>
+					<img src="./assets/done-window.png" alt="done-window">
+				</section>
+				<section data-state="dimbg" data-background="./assets/bg.jpg">
+					<p style="margin-top: 100px;">npm run package</p>
+					<p>npm run make</p>
+				</section>
+			</section>
+			<section data-state="dimbg" data-background="./assets/bg.jpg">
+				<h2>Additional features</h2>
+				<ul>
+					<li>IPC (inter process communication module)</li>
+					<li>Autoupdater</li>
+					<li>Report, data collection, telemetry</li>
+					<li>Data storage</li>
+				</ul>
+			</section>
+			<section data-state="dimbg" data-background="./assets/bg.jpg">
+				<h2>Applications Advantages</h2>
+				<section>
+					<table>
+						<tr>
+							<ul style="font-size: 32px;">
+								<li>User Interface</li>
+								<li>Chrome devTools</li>
+								<li>Cross-platform</li>
+								<li>Any stack of technology's</li>
+								<li>Last version of chrome</li>
+							</ul>
+						</tr>
+						<tr>
+							<ul style="font-size: 32px; margin-left: 70px;">
+								<li>350k+ npm packages</li>
+								<li>Native modules</li>
+								<li>JS community</li>
+								<li>Open source</li>
+								<li class="fragment" style="color: orangered;">JavaScript</li>
+							</ul>
+						</tr>
+					</table>
+				</section>
+			</section>
+			<section data-state="dimbg" data-background="./assets/bg.jpg">
+				<h2>Applications Disadvantages</h2>
+				<section>
+					<ul>
+						<li>Fat</li>
+						<li>Greedily</li>
+						<li>Cross-platform</li>
+						<li class="fragment" style="color: orangered;">JavaScript</li>
+					</ul>
+				</section>
+			</section>
+			<section data-state="dimbg" data-background="./assets/bg.jpg">
+				<h2 style="color: orangered;">Сonclusion</h2>
+				<section>
+					<p>Choose the right tools for your goals</p>
+					<h3 class="fragment">Thank you</h3>
+				</section>
+			</section>
 		</div>
+	</div>
 
-		<script src="js/reveal.js"></script>
+	<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
-		</script>
-	</body>
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [{
+					src: 'plugin/markdown/marked.js'
+				},
+				{
+					src: 'plugin/markdown/markdown.js'
+				},
+				{
+					src: 'plugin/notes/notes.js',
+					async: true
+				},
+				{
+					src: 'plugin/highlight/highlight.js',
+					async: true
+				}
+			]
+		});
+	</script>
+</body>
+
 </html>
